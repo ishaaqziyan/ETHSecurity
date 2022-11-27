@@ -11,7 +11,7 @@ contract Fundraiser{
     
     function  public withdraw(){
         if(balances[msg.sender] == 0){
-            throw;
+            revert();
         }
         
         balances[msg.sender] = 0;
